@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class EscapeMenuController : MonoBehaviour {
     public GameObject EscMenuPanel;
-    //public GameObject howToPlayPanel;
     private bool isPaused = false;
 
     // Start is called before the first frame update
@@ -42,6 +41,7 @@ public class EscapeMenuController : MonoBehaviour {
         Time.timeScale = 0f; // Pauses 0 frames
         isPaused = true;
     }
+
     //Function to return to Title 
     public void returnToTitle() {
         Time.timeScale = 1f; //Resets the time scale
