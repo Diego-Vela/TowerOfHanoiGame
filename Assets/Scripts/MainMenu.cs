@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Script that manages the Title Screen
+*/
+
 public class NewBehaviourScript : MonoBehaviour
 {
    public void PlayGame()

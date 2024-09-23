@@ -4,14 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+Script that manages the escape menu of the game
+*/
+
 public class EscapeMenuController : MonoBehaviour {
     public GameObject EscMenuPanel;
     private bool isPaused = false;
 
     // Start is called before the first frame update
-    void Start() {
-        
-    }
+    void Start() {}
 
     // Update is called once per frame
     void Update() {
