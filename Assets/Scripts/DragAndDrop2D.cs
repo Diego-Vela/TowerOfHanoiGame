@@ -19,16 +19,16 @@ public class DragAndDrop2D : MonoBehaviour {
     }
 
     //Get the offset between the mouse position and the disk position
-void OnMouseDown() {
-    // Record the offset between the disk and the mouse click point
-    offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    offset.z = 0;
+    void OnMouseDown() {
+        // Record the offset between the disk and the mouse click point
+        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        offset.z = 0;
         
-    // Set original position in case we need to reset it
-    originalPos = transform.position;
+        // Set original position in case we need to reset it
+        originalPos = transform.position;
         
-    //isDragging = true;
-}
+        //isDragging = true;
+    }
     
     //Move the disk with the mouse while maintaining the offset
     void OnMouseDrag() {

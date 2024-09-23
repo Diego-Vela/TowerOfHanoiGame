@@ -12,7 +12,7 @@ public class WinMenuController : MonoBehaviour {
     public GameObject WinMenuPanel;
 
     // Start is called before the first frame update
-    void Start() {
+    private void Start() {
         WinMenuPanel.SetActive(false);
     }
     

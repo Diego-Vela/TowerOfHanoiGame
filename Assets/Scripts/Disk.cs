@@ -6,7 +6,7 @@ Script that tracks collisions with the win tower
 public class Disk : MonoBehaviour {
     private WinCondition winCondition;
 
-    void Start() {
+    private void Start() {
         // Find the GameManager in the scene
         winCondition = FindObjectOfType<WinCondition>();
     }

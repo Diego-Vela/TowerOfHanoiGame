@@ -10,7 +10,7 @@ public class WinCondition : MonoBehaviour
     private int disksOnTower; // Counter for disks on the win tower
     private WinMenuController winMenu; // Controller for win menu panel
 
-    void Start() {
+    private void Start() {
         // Initialize the number of disks
         disksOnTower = 0;
         //Get reference to WinMenuController
