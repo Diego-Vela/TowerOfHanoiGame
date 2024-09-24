@@ -9,7 +9,7 @@ Script that manages Drag and Drop of Disks
 public class DragAndDrop2D : MonoBehaviour {
     
     private Vector3 offset;
-    //private bool isDragging = false;
+    public bool isDragging = false;
     private Vector3 originalPos;
     private Camera cam;
     private WinCondition winCondition;
@@ -27,7 +27,7 @@ public class DragAndDrop2D : MonoBehaviour {
         // Set original position in case we need to reset it
         originalPos = transform.position;
         
-        //isDragging = true;
+        isDragging = true;
     }
     
     //Move the disk with the mouse while maintaining the offset
@@ -35,20 +35,15 @@ public class DragAndDrop2D : MonoBehaviour {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
         transform.position = mousePosition + offset; // Add the offset to the mouse position
-        
-        /* Check for tower collision
-        if (IsCollidingWithTower()) {
-            // Reset position to original to prevent passing through the tower
-            transform.position = originalPos;
-        }
-        else {
-            // Update originalPosition to current when there's no collision*/
-            originalPos = transform.position;
-        //}
+        originalPos = transform.position;
     }
 
     void OnMouseUp() {
-        //isDragging = false;
+        isDragging = false;
+    }
+    //Gets Variable to isDragging
+    public bool IsDragging {
+        get {return isDragging; }
     }
 }
 

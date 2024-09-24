@@ -426,7 +426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &189206696
 Transform:
   m_ObjectHideFlags: 0
@@ -580,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!114 &189206701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 529454932}
+  - component: {fileID: 529454933}
   m_Layer: 0
   m_Name: RingContainer
   m_TagString: Disk
@@ -1212,6 +1214,29 @@ Transform:
   - {fileID: 1464006828}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529454933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529454931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a3a7798d10da841a6e0db71bdd3e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disks:
+  - {fileID: 1464006827}
+  - {fileID: 820989154}
+  - {fileID: 1427371523}
+  - {fileID: 1726087248}
+  - {fileID: 1057691692}
+  - {fileID: 1448503802}
+  - {fileID: 189206695}
+  - {fileID: 885899186}
+  numOfDisks: 8
+  delay: 0.3
 --- !u!1 &559190675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1378,7 @@ GameObject:
   - component: {fileID: 561971870}
   - component: {fileID: 561971871}
   - component: {fileID: 561971872}
+  - component: {fileID: 561971873}
   m_Layer: 8
   m_Name: TowerMid
   m_TagString: Tower
@@ -1472,6 +1498,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &561971873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561971869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d6c3d0a64cf45d588c6468e412a1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &579171531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,7 +1856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &820989155
 Transform:
   m_ObjectHideFlags: 0
@@ -1972,6 +2010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!114 &820989160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,7 +2043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &885899187
 Transform:
   m_ObjectHideFlags: 0
@@ -2158,6 +2197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!114 &885899192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2182,7 +2222,7 @@ GameObject:
   - component: {fileID: 915132914}
   - component: {fileID: 915132913}
   m_Layer: 9
-  m_Name: TowerRight
+  m_Name: TowerRightC
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2510,6 +2550,7 @@ GameObject:
   - component: {fileID: 1008131950}
   - component: {fileID: 1008131949}
   - component: {fileID: 1008131951}
+  - component: {fileID: 1008131952}
   m_Layer: 8
   m_Name: TowerLeft
   m_TagString: Tower
@@ -2629,6 +2670,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1008131952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008131948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d6c3d0a64cf45d588c6468e412a1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1039763866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,7 +2784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1057691693
 Transform:
   m_ObjectHideFlags: 0
@@ -2885,6 +2938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!114 &1057691698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,7 +3559,7 @@ GameObject:
   - component: {fileID: 1353553695}
   - component: {fileID: 1353553694}
   m_Layer: 9
-  m_Name: TowerMid
+  m_Name: TowerMidC
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4126,7 +4180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1427371524
 Transform:
   m_ObjectHideFlags: 0
@@ -4280,6 +4334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!114 &1427371529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4312,7 +4367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1448503803
 Transform:
   m_ObjectHideFlags: 0
@@ -4466,6 +4521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!114 &1448503808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4498,7 +4554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1464006828
 Transform:
   m_ObjectHideFlags: 0
@@ -4607,6 +4663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!61 &1464006833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4882,7 +4939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1726087249
 Transform:
   m_ObjectHideFlags: 0
@@ -5036,6 +5093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec5ba6511a579e4082298d7f57f9dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!114 &1726087254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5059,6 +5117,7 @@ GameObject:
   - component: {fileID: 1807600469}
   - component: {fileID: 1807600470}
   - component: {fileID: 1807600471}
+  - component: {fileID: 1807600472}
   m_Layer: 8
   m_Name: TowerRight
   m_TagString: Tower
@@ -5178,6 +5237,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1807600472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807600468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d6c3d0a64cf45d588c6468e412a1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1814518454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,7 +6281,7 @@ GameObject:
   - component: {fileID: 2041805413}
   - component: {fileID: 2041805412}
   m_Layer: 9
-  m_Name: TowerLeft
+  m_Name: TowerLeftC
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

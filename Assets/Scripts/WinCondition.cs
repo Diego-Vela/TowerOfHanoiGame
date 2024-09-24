@@ -27,11 +27,10 @@ public class WinCondition : MonoBehaviour
     // Tracks when a disk leaves the win tower
     public void DiskOffWinTower() {
         disksOnTower--;
-        Debug.Log("Removing a disk");
     }
 
     // Check if the player has won by stacking all disks on the win tower
-    void CheckWinCondition() {
+    public void CheckWinCondition() {
         if (disksOnTower == totalDisks) { //Needs to add a valid move before disks on tower
             WinGame();
         }
