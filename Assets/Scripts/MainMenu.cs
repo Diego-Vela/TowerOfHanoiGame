@@ -11,7 +11,7 @@ public class NewBehaviourScript : MonoBehaviour
    }
 
     public void GoToSettingsMenu()
-    {
+    {   
         SceneManager.LoadScene("SettingsMenu");
     }
 
@@ -21,6 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
    public void QuitGame()
    {
-        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
    }
+    
 }
