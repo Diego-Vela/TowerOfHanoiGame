@@ -30,7 +30,7 @@ public class EscapeMenuController : MonoBehaviour {
         }
     }
     
-    //Function that resumes the game
+    //Function connected to Resume button
     public void resume() {
         EscMenuPanel.SetActive(false);
         Time.timeScale = 1f; // Resumes 1 frame
