@@ -6,7 +6,7 @@ Script that tracks the win condition of the game for Tower of Hanoi Game
 public class WinCondition : MonoBehaviour
 {
     public GameObject winTower; // Reference to the winning tower
-    public int totalDisks; // Number of disks in the game
+    private int totalDisks; // Number of disks in the game
     private int disksOnTower; // Counter for disks on the win tower
     private WinMenuController winMenu; // Controller for win menu panel
 
@@ -15,6 +15,10 @@ public class WinCondition : MonoBehaviour
         disksOnTower = 0;
         //Get reference to WinMenuController
         winMenu = FindObjectOfType<WinMenuController>();
+    }
+
+    public void setTotalDisks(int num) {
+        totalDisks = num;
     }
 
     // Tracks when a new disk enters the win tower

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class InvalidTowerCheck : MonoBehaviour {
     private Stack<float> towerStack;
+    private LoseMenuController loseMenu; // Controller for win menu panel
 
     // Start is called before the first frame update
     void Start() {
        towerStack = new Stack<float>();
+       loseMenu = FindObjectOfType<LoseMenuController>(); 
     }
 
     //
@@ -16,6 +18,7 @@ public class InvalidTowerCheck : MonoBehaviour {
             Debug.Log("Invalid Move. You Lost");
             addToTower(size);
             //Add Lose menu panel
+            loseMenu.showMenu();
             return false;
         }
         addToTower(size);

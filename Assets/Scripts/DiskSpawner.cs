@@ -7,13 +7,22 @@ public class DiskSpawner : MonoBehaviour
     // List to hold the disk GameObjects in the correct order
     public List<GameObject> disks = new List<GameObject>();
     public int numOfDisks;
+    private WinCondition winCondition;
 
     // Time between activating each disk (in seconds)
     public float delay = 1.0f;
 
     private void Start() {
+        //Get Reference to WinCondition
+        winCondition = FindObjectOfType<WinCondition>();
+    }
+
+    public void StartSpawn(int numOfDisks) {
         //Check that spawner is working
         Debug.Log("Spawner Has Started");
+        //Set Win Condition Disks
+        winCondition.setTotalDisks(numOfDisks);
+        Debug.Log("Win Disks set to " + numOfDisks);
         // Start the coroutine to activate disks
         StartCoroutine(ActivateDisks(numOfDisks));  // Start the coroutine here
     }
