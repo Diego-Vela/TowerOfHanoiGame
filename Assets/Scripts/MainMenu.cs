@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Script that manages the Title Screen
+*/
+
 public class NewBehaviourScript : MonoBehaviour
 {
    public void PlayGame()
@@ -22,5 +26,9 @@ public class NewBehaviourScript : MonoBehaviour
    public void QuitGame()
    {
         Application.Quit();
+        //Code for using unity editor
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
    }
 }
