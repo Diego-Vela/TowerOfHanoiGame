@@ -26,5 +26,9 @@ public class NewBehaviourScript : MonoBehaviour
    public void QuitGame()
    {
         Application.Quit();
+        //Code for using unity editor
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
    }
 }
